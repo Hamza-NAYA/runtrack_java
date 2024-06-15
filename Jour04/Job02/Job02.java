@@ -8,15 +8,17 @@ import java.util.Scanner;
 
 public class Job02 {
     public static void main(String[] args) {
-        // Mesurer le temps de début
-        long startTime = System.currentTimeMillis();
-
         // Scanner pour lire l'entrée utilisateur
         Scanner scanner = new Scanner(System.in);
 
         // Demander à l'utilisateur la longueur de la chaîne
         System.out.print("Entrez la longueur de la chaîne de caractères : ");
         int length = scanner.nextInt();
+
+        scanner.close();
+
+        // Mesurer le temps de début
+        long startTime = System.currentTimeMillis();
 
         // Générer une chaîne de caractères aléatoire
         String randomString = generateRandomString(length);
@@ -35,7 +37,6 @@ public class Job02 {
         long duration = endTime - startTime;
         System.out.println("Le programme a pris " + duration + " millisecondes pour s'exécuter");
 
-        scanner.close();
     }
 
     // Méthode pour générer une chaîne de caractères aléatoire
